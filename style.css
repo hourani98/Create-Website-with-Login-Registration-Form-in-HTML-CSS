@@ -1,0 +1,184 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url(images/hero-bg.jpg); /*Background image*/
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+/*Navbar*/
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 80px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+.logo img {
+  background: none;
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
+li {
+  margin: 0 10px;
+}
+a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
+}
+a:hover {
+  text-decoration: underline;
+  color: gray;
+}
+
+.btn {
+  background: white;
+  padding: 10px 15px 10px 15px;
+  border: none;
+  border-radius: 9px;
+  color: rgb(0, 200, 250);
+  cursor: pointer;
+}
+/*Navbar*/
+/* All Cader*/
+.cader {
+  background: white;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 50%;
+  height: 60vh;
+  padding: 7px;
+  position: absolute;
+  left: 25%;
+  top: 25%;
+}
+.form {
+  flex-direction: column;
+}
+.form h2 {
+  text-align: center;
+  margin-top: 40px;
+}
+.form input {
+  padding: 10px 20px;
+  width: 90%;
+  margin-left: 25px;
+  margin-top: 40px;
+}
+.link {
+  color: rgb(0, 200, 250);
+  margin-left: 25px;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  font-size: 15px;
+}
+.btn-1 {
+  background: rgb(0, 200, 250);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+
+  width: 90%;
+  margin-left: 25px;
+  margin-top: 20px;
+}
+.btn-1:hover {
+  color: white;
+}
+.bottom-link {
+  text-align: center;
+  margin-top: 20px;
+}
+.bottom-link a {
+  color: rgb(0, 200, 250);
+  font-size: 15px;
+}
+
+.left {
+  background: url("images/signup-img.jpg");
+  background-position: center;
+  background-size: cover;
+  padding: 0 20px;
+  text-align: center;
+}
+.left h3 {
+  color: white;
+  margin-top: 50%;
+  font-size: 30px;
+}
+.left p {
+  margin-top: 40px;
+  color: white;
+  cursor: pointer;
+
+  font-size: 20px;
+}
+.checkbtn {
+  color: #fff;
+  font-size: 20px;
+  display: none;
+}
+#check {
+  display: none;
+}
+/*Media */
+@media (max-width: 960px) {
+  .cader {
+    width: 45%;
+  }
+  .form input {
+    width: 80%;
+  }
+  .btn-1 {
+    width: 80%;
+  }
+}
+@media (max-width: 804px) {
+  .checkbtn {
+    display: block;
+  }
+  ul {
+    position: fixed;
+    flex-direction: column;
+    top: 80px;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    transition: all 0.5s ease-in;
+  }
+  li {
+    margin: 19px 0;
+  }
+  a:hover {
+    color: black;
+  }
+  .cader {
+    display: none;
+  }
+
+  #check:checked ~ ul {
+    left: 0;
+  }
+}
